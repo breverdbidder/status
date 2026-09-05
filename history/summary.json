@@ -112,19 +112,19 @@
     "url": "https://mocerqjnksmhcjzxrewo.supabase.co/rest/v1/rpc/auctions_summary_ssot",
     "icon": "https://icons.duckduckgo.com/ip3/mocerqjnksmhcjzxrewo.supabase.co.ico",
     "slug": "auctions-data-api",
-    "status": "down",
-    "uptime": "46.19%",
-    "uptimeDay": "46.19%",
-    "uptimeWeek": "46.19%",
-    "uptimeMonth": "46.19%",
-    "uptimeYear": "46.19%",
-    "time": 52,
-    "timeDay": 52,
-    "timeWeek": 52,
-    "timeMonth": 52,
-    "timeYear": 52,
+    "status": "up",
+    "uptime": "5.69%",
+    "uptimeDay": "5.69%",
+    "uptimeWeek": "5.69%",
+    "uptimeMonth": "5.69%",
+    "uptimeYear": "5.69%",
+    "time": 175,
+    "timeDay": 175,
+    "timeWeek": 175,
+    "timeMonth": 175,
+    "timeYear": 175,
     "dailyMinutesDown": {
-      "2026-09-05": 0
+      "2026-09-05": 5
     }
   },
   {

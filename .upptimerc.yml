@@ -1,31 +1,54 @@
 # Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: breverdbidder
+repo: status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: BidDeed.AI API Health
+    url: https://biddeed.ai/api/health
+    expectedStatusCodes: [200]
+    __dangerous__body_down_if_text_missing: "ok"
+
+  - name: MCP OAuth Resource
+    url: https://mcp.biddeed.ai/.well-known/oauth-protected-resource
+    expectedStatusCodes: [200]
+
+  - name: MCP Server
+    url: https://mcp.biddeed.ai/api/mcp
+    expectedStatusCodes: [401]
+
+  - name: ZoneWise Stats API
+    url: https://zonewise.ai/api/stats
+    expectedStatusCodes: [200]
+
+  - name: WinnerData AI
+    url: https://winnerdataai.com
+    expectedStatusCodes: [200]
+
+  - name: Fact Finder Health
+    url: https://ff.winnerdataai.com/healthz
+    expectedStatusCodes: [200]
+
+  - name: Auctions Data API
+    url: https://mocerqjnksmhcjzxrewo.supabase.co/rest/v1/rpc/auctions_summary_ssot
+    method: POST
+    headers:
+      - "apikey: $SUPABASE_ANON_KEY_PUBLIC"
+      - "Authorization: Bearer $SUPABASE_ANON_KEY_PUBLIC"
+      - "Content-Type: application/json"
+    body: "{}"
+    expectedStatusCodes: [200]
+
+  - name: Brevard County Page
+    url: https://biddeed.ai/county/brevard
+    expectedStatusCodes: [200]
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.biddeed.ai
+  name: "BidDeed.AI Status"
+  introTitle: "**BidDeed.AI** system status"
+  introMessage: This page reports real-time uptime for BidDeed.AI's public services, checked every 5 minutes. No server required — just GitHub Actions, Issues, and Pages.
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration

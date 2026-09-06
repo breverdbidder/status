@@ -1,7 +1,7 @@
 url: https://biddeed.ai/county/brevard
-status: up
-code: 200
-responseTime: 1091
-lastUpdated: 2026-09-05T23:05:45.460Z
+status: down
+code: 404
+responseTime: 74
+lastUpdated: 2026-09-06T13:56:13.162Z
 startTime: 2026-09-05T15:16:09.899Z
 generator: Upptime <https://github.com/upptime/upptime>

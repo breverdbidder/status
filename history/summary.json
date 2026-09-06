@@ -95,19 +95,17 @@
     "icon": "https://icons.duckduckgo.com/ip3/ff.winnerdataai.com.ico",
     "slug": "fact-finder-health",
     "status": "up",
-    "uptime": "98.92%",
-    "uptimeDay": "98.92%",
-    "uptimeWeek": "98.92%",
-    "uptimeMonth": "98.92%",
-    "uptimeYear": "98.92%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 325,
     "timeDay": 325,
     "timeWeek": 325,
     "timeMonth": 325,
     "timeYear": 325,
-    "dailyMinutesDown": {
-      "2026-09-05": 6
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Auctions Data API",

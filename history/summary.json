@@ -95,19 +95,17 @@
     "icon": "https://icons.duckduckgo.com/ip3/ff.winnerdataai.com.ico",
     "slug": "fact-finder-health",
     "status": "up",
-    "uptime": "99.26%",
-    "uptimeDay": "99.26%",
-    "uptimeWeek": "99.26%",
-    "uptimeMonth": "99.26%",
-    "uptimeYear": "99.26%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 304,
     "timeDay": 304,
     "timeWeek": 304,
     "timeMonth": 304,
     "timeYear": 304,
-    "dailyMinutesDown": {
-      "2026-09-06": 6
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Auctions Data API",
@@ -132,17 +130,17 @@
     "url": "https://biddeed.ai/county/brevard",
     "icon": "https://icons.duckduckgo.com/ip3/biddeed.ai.ico",
     "slug": "brevard-county-page",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 757,
-    "timeDay": 757,
-    "timeWeek": 757,
-    "timeMonth": 757,
-    "timeYear": 757,
+    "time": 529,
+    "timeDay": 529,
+    "timeWeek": 529,
+    "timeMonth": 529,
+    "timeYear": 529,
     "dailyMinutesDown": {}
   }
 ]

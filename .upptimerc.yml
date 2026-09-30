@@ -46,9 +46,12 @@ status-website:
   cname: status.biddeed.ai
   name: "BidDeed.AI Status"
   introTitle: "**BidDeed.AI** system status"
-  introMessage: This page reports real-time uptime for BidDeed.AI's public services, checked every 5 minutes. No server required — just GitHub Actions, Issues, and Pages.
+  introMessage: This page reports real-time uptime for BidDeed.AI's public services, checked every 15 minutes. No server required — just GitHub Actions, Issues, and Pages.
   navbar:
     - title: Status
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
+
+workflowSchedule:
+  uptime: "*/15 * * * *"

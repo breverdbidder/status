@@ -1,7 +1,7 @@
 # On-call route and alert rules
 
 **Status: PROPOSAL** for Ariel (BUG-036, checkpoint REL-05 in breverdbidder/biddeed-monetization-engine). Ariel is the only
-on-call person. Every alert below reaches him with no new vendor; the faster push channels need one secret each, which Ariel adds.
+on-call person. Every alert below reaches Ariel with no new vendor; the faster push channels need one secret each, which Ariel adds.
 
 ## Alert rules
 
@@ -11,6 +11,7 @@ on-call person. Every alert below reaches him with no new vendor; the faster pus
 | Stripe webhook stale | No processed event within 7 days ([ARIEL INPUT] in SLO.md) | `/health/deep?component=stripe` monitor (status PR #14, Worker BUG-033) | Upptime issue |
 | Report generation stale or failing | No delivered report within 7 days, or a recent failed row | `/health/deep?component=report_queue` monitor (same PRs) | Upptime issue |
 | County feed stale | An expected feed's last success is older than 48 h | `auction-scraper-playwright` `feed_freshness.yml` (BUG-047) | `freshness-alert` issue in that repo, plus a failed run |
+| Data API error burst (**gap**) | Share of HTTP 5xx on the data API above a threshold in a 15-minute window ([ARIEL INPUT]) | Not defined yet. Upptime checks one URL every 15 minutes and missed the 2026-10-08 burst (1,012 errors, BUG-071, [INCIDENTS.md](INCIDENTS.md)). Options: a scheduled job reading the API gateway logs (needs a read-only logs credential Ariel creates), or an error counter in the Worker | Issue in this repo |
 
 Spec 09 BUG-036 gives "> 24 h without a report success" as its example. With today's sales volume a 24 h rule would alert every day,
 so these rules use the 7-day FIN-04 threshold until Ariel sets the value in [SLO.md](SLO.md).

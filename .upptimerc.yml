@@ -42,6 +42,30 @@ sites:
     url: https://biddeed.ai/county/brevard
     expectedStatusCodes: [200]
 
+  # Per-component health from the Worker's /health/deep?component=<name> (BUG-033, REL-01):
+  # 200 only when the component is Operational; Degraded, Down and Unknown return 503, so this
+  # page shows the same state as https://biddeed.ai/status. Thresholds: Stripe webhook and report
+  # generation need a success within 7 days (FIN-04); db, MCP and Worker are checked live.
+  - name: Database (component health)
+    url: https://biddeed.ai/health/deep?component=db
+    expectedStatusCodes: [200]
+
+  - name: MCP (component health)
+    url: https://biddeed.ai/health/deep?component=mcp
+    expectedStatusCodes: [200]
+
+  - name: Stripe webhook (success within 7 days)
+    url: https://biddeed.ai/health/deep?component=stripe
+    expectedStatusCodes: [200]
+
+  - name: Report generation (success within 7 days)
+    url: https://biddeed.ai/health/deep?component=report_queue
+    expectedStatusCodes: [200]
+
+  - name: Worker (component health)
+    url: https://biddeed.ai/health/deep?component=worker
+    expectedStatusCodes: [200]
+
 status-website:
   cname: status.biddeed.ai
   name: "BidDeed.AI Status"
